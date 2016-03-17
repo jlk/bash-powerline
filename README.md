@@ -2,11 +2,15 @@
 
 Powerline for Bash in pure Bash script. 
 
+![bash-powerline](https://raw.github.com/riobard/bash-powerline/master/screenshots/solarized-docker.png)
 ![bash-powerline](https://raw.github.com/riobard/bash-powerline/master/screenshots/solarized-light-source-code-pro.png)
 ![bash-powerline](https://raw.github.com/riobard/bash-powerline/master/screenshots/solarized-dark-monaco.png)
 
 ## Features
 
+* Docker: display current docker machine
+* Docker: display "⇡" symbol when the docker machine is started
+* Docker: display "⇣" symbol when the docker machine is stopped
 * Git branch: display current git branch name, or short SHA1 hash when the head
   is detached
 * Git branch: display "+" symbol when current branch is changed but uncommited
