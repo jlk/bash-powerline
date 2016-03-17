@@ -129,8 +129,8 @@ __powerline() {
         fi
 
         PS1="$BG_BASE1$FG_BASE3 \w $RESET"
-        PS1+="$BG_BLUE$FG_BASE3$(__docker_machine_ps1)$RESET"
-        PS1+="$BG_RED$FG_BASE3$(__git_info)$RESET"
+        PS1+="$BG_VIOLET$FG_BASE3$(__docker_machine_ps1)$RESET"
+        PS1+="$BG_BLUE$FG_BASE3$(__git_info)$RESET"
         PS1+="$BG_EXIT$FG_BASE3 $PS_SYMBOL $RESET "
     }
 
