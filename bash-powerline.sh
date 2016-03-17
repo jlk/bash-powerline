@@ -10,8 +10,10 @@ __powerline() {
     readonly GIT_BRANCH_CHANGED_SYMBOL='+'
     readonly GIT_NEED_PUSH_SYMBOL='⇡'
     readonly GIT_NEED_PULL_SYMBOL='⇣'
-    readonly DOCKER_SYMBOL='# '
+    readonly DOCKER_SYMBOL='☐ '
     readonly DOCKER_RUNNING_SYMBOL='⇡'
+    readonly DOCKER_STOPPING_SYMBOL='⇤'
+    readonly DOCKER_STARTING_SYMBOL='⇥'
     readonly DOCKER_ERROR_SYMBOL='*'
     readonly DOCKER_STOPPED_SYMBOL='⇣'
 
@@ -99,6 +101,12 @@ __powerline() {
             case $status in
                 Running)
                     status=" $DOCKER_RUNNING_SYMBOL"
+                    ;;
+                Stopping)
+                    status=" $DOCKER_STOPPING_SYMBOL"
+                    ;;
+                Starting)
+                    status=" $DOCKER_STARTING_SYMBOL"
                     ;;
                 Error|Timeout)
                     status=" $DOCKER_ERROR_SYMBOL"
