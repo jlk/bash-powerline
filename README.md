@@ -6,9 +6,9 @@ Powerline for Bash in pure Bash script.
 
 ## Features
 
-* Docker: display current docker machine
-* Docker: display "⇡" symbol when the docker machine is started
-* Docker: display "⇣" symbol when the docker machine is stopped
+* **Docker Machine: display current docker machine**
+* **Docker Machine: display "⇡" symbol when the docker machine is started**
+* **Docker Machine: display "⇣" symbol when the docker machine is stopped**
 * Git branch: display current git branch name, or short SHA1 hash when the head
   is detached
 * Git branch: display "+" symbol when current branch is changed but uncommited
