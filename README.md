@@ -3,8 +3,6 @@
 Powerline for Bash in pure Bash script. 
 
 ![bash-powerline](https://raw.github.com/arnoldcano/bash-powerline/master/screenshots/solarized-docker.png)
-![bash-powerline](https://raw.github.com/arnoldcano/bash-powerline/master/screenshots/solarized-light-source-code-pro.png)
-![bash-powerline](https://raw.github.com/arnoldcano/bash-powerline/master/screenshots/solarized-dark-monaco.png)
 
 ## Features
 
