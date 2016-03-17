@@ -10,6 +10,10 @@ __powerline() {
     readonly GIT_BRANCH_CHANGED_SYMBOL='+'
     readonly GIT_NEED_PUSH_SYMBOL='⇡'
     readonly GIT_NEED_PULL_SYMBOL='⇣'
+    readonly DOCKER_SYMBOL='# '
+    readonly DOCKER_RUNNING_SYMBOL='⇡'
+    readonly DOCKER_ERROR_SYMBOL='*'
+    readonly DOCKER_STOPPED_SYMBOL='⇣'
 
     # Solarized colorscheme
     readonly FG_BASE03="\[$(tput setaf 8)\]"
@@ -89,6 +93,24 @@ __powerline() {
         printf " $GIT_BRANCH_SYMBOL$branch$marks "
     }
 
+    __docker_machine_ps1 () {
+        if test $DOCKER_MACHINE_NAME; then
+            local status=$(docker-machine status $DOCKER_MACHINE_NAME)
+            case $status in
+                Running)
+                    status=" $DOCKER_RUNNING_SYMBOL"
+                    ;;
+                Error|Timeout)
+                    status=" $DOCKER_ERROR_SYMBOL"
+                    ;;
+                *)
+                    status=" $DOCKER_STOPPED_SYMBOL"
+                    ;;
+            esac
+            printf " $DOCKER_SYMBOL$DOCKER_MACHINE_NAME$status "
+        fi
+    }
+
     ps1() {
         # Check the exit code of the previous command and display different
         # colors in the prompt accordingly. 
@@ -99,7 +121,8 @@ __powerline() {
         fi
 
         PS1="$BG_BASE1$FG_BASE3 \w $RESET"
-        PS1+="$BG_BLUE$FG_BASE3$(__git_info)$RESET"
+        PS1+="$BG_BLUE$FG_BASE3$(__docker_machine_ps1)$RESET"
+        PS1+="$BG_RED$FG_BASE3$(__git_info)$RESET"
         PS1+="$BG_EXIT$FG_BASE3 $PS_SYMBOL $RESET "
     }
 
