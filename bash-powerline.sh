@@ -10,7 +10,7 @@ __powerline() {
     readonly GIT_BRANCH_CHANGED_SYMBOL='+'
     readonly GIT_NEED_PUSH_SYMBOL='⇡'
     readonly GIT_NEED_PULL_SYMBOL='⇣'
-    readonly DOCKER_SYMBOL='☐ '
+    readonly DOCKER_SYMBOL='❒ '
     readonly DOCKER_RUNNING_SYMBOL='⇡'
     readonly DOCKER_ERROR_SYMBOL='*'
     readonly DOCKER_STOPPED_SYMBOL='⇣'
