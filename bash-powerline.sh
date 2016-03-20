@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-
+# bash-powerline status feature for bash prompts
+# https://github.com/arnoldcano/bash-powerline
+###
 __powerline() {
 
     # Unicode symbols
